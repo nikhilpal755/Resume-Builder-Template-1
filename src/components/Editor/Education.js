@@ -36,7 +36,7 @@ const Education = () => {
   const handleSaveClick = () => ctx.updateInfo(education)
 
   return (
-    <div className='pt-6'>
+    <div className='pt-5'>
       {education.items.map((item, index) => (
         <EducationItem
           key={index}

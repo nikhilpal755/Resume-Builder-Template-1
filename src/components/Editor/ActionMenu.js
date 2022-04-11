@@ -15,9 +15,9 @@ const ActionMenu = ({
         Save
       </button>
       <div className='flex flex-row pt-[5px]'>
-        <Add color='#d1d5db' handleClick={handleAddClick} />
+        {handleAddClick && <Add color='#d1d5db' handleClick={handleAddClick} />}
 
-        <Remove color='#d1d5db' handleClick={handleRemoveClick} />
+        {handleRemoveClick && <Remove color='#d1d5db' handleClick={handleRemoveClick} />}
       </div>
     </div>
   )

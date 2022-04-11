@@ -19,6 +19,15 @@ const EducationItem = ({ index, data, handleChange }) => {
         defaultValue={data.date}
         handleChange={(e) => handleChange(index, e)}
       />
+
+    <TextArea
+        placeholder='Description'
+        rows='2'
+        style='pb-2'
+        name='desc'
+        defaultValue={data.desc}
+        handleChange={(e) => handleChange(index, e)}
+      />
     </div>
   )
 }

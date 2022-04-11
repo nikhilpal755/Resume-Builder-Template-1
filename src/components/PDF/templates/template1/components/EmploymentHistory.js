@@ -1,3 +1,4 @@
+// import { EmploymentHistoryItem } from '../../../Sections/right/EmploymentHistoryItem'
 import { EmploymentHistoryItem } from './EmploymentHistoryItem'
 import { Text, View } from '@react-pdf/renderer'
 import Divider from './Divider'
@@ -5,13 +6,14 @@ import Divider from './Divider'
 const EmploymentHistory = ({ items }) => {
   return (
     <View style={{ paddingTop: '20px' }}>
+      <Divider />
       <Text
         style={{
           color: '#000',
           fontSize: '15',
         }}
       >
-        Employment History
+        Work Experience
       </Text>
       <Divider />
       {items.map((item, index) => (

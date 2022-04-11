@@ -1,7 +1,8 @@
-import styles from '../../../../styles'
+// import styles from '../../../../../styles'
 import { Text, View } from '@react-pdf/renderer'
+import styles from '../styles/style'
 
-export const SkillItem = ({ name, fillSkill }) => {
+const SkillItem = ({ name, fillSkill }) => {
   let percent = fillSkill > 100 ? 100 : fillSkill
   return (
     <View style={styles.skill__item__container}>
@@ -14,3 +15,5 @@ export const SkillItem = ({ name, fillSkill }) => {
     </View>
   )
 }
+
+export default SkillItem

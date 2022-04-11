@@ -15,8 +15,10 @@ import ReactPDF, {
 import { BuilderContext } from './../../App'
 // import roboto from '../fonts/Roboto-Bold.ttf'
 import { PDFViewer, PDFDownloadLink } from '@react-pdf/renderer'
-import { Right as SectionRight } from './Sections/Right_'
-import { Left as SectionLeft } from './Sections/Left_'
+// import { Right as SectionRight } from './Sections/Right_'
+// import { Left as SectionLeft } from './Sections/Left_'
+import Left from './templates/template1/left.js'
+import Right  from './templates/template1/right.js'
 
 // Font.register({
 //   family: 'Roboto',
@@ -27,7 +29,10 @@ import { Left as SectionLeft } from './Sections/Left_'
 //   ],
 // })
 // Create styles
+
 import styles from '../../styles'
+
+
 // Create Document Component
 
 const PreviewScreen = () => {
@@ -37,8 +42,8 @@ const PreviewScreen = () => {
       <PDFViewer
         showToolbar={false}
         style={{
-          width: '100%',
-          height: '100%',
+          width: '50vw',
+          height: '100vh',
           // fontFamily: 'Roboto',
         }}
       >
@@ -58,8 +63,11 @@ const ResumeTemplate = ({ builder }) => (
   <Document style={styles.document}>
     <Page size='A4' style={styles.page}>
       <BuilderContext.Provider value={builder}>
-        <SectionLeft />
-        <SectionRight />
+        {/* <SectionLeft />
+        <SectionRight /> */}
+        
+        <Left />
+        <Right/>
       </BuilderContext.Provider>
     </Page>
   </Document>

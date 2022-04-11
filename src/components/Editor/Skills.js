@@ -17,7 +17,9 @@ const Skills = () => {
       ...skills.items[i],
       [targetName]: e.target.value,
     }
+    // console.log(modifiedItem)
     skills.items.splice(i, 1, modifiedItem)
+    // console.log(skills)
   }
   const handleAddClick = () => {
     setSkills({
@@ -36,12 +38,12 @@ const Skills = () => {
   const handleSaveClick = () => ctx.updateInfo(skills)
   return (
     <div className='pt-10'>
-      <ToggleButton
+      {/* <ToggleButton
         defaultValue={skills.display}
         handleChange={(name, prop, isEnabled) => {
           ctx.updateInfo({ ...skills, display: isEnabled })
         }}
-      />
+      /> */}
       {skills.items.map((item, index) => (
         <div key={index} className='flex flex-row py-1'>
           <TextInput
